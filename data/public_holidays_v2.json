@@ -1,0 +1,79 @@
+{
+  "schema_version": "2.0",
+  "dataset_version": "2026.1",
+  "generated_at": "2026-03-13T16:25:00+10:30",
+  "countries": {
+    "AU": {
+      "country_name": "Australia",
+      "currency": "AUD",
+      "default_timezone": "Australia/Sydney",
+      "regions": {
+        "AU": {
+          "region_name": "National",
+          "holidays": {
+            "2025": {
+              "2025-01-01": "New Year's Day",
+              "2025-01-27": "Australia Day (Observed)",
+              "2025-04-18": "Good Friday",
+              "2025-04-21": "Easter Monday",
+              "2025-04-25": "ANZAC Day",
+              "2025-06-09": "King's Birthday",
+              "2025-12-25": "Christmas Day",
+              "2025-12-26": "Boxing Day"
+            },
+            "2026": {
+              "2026-01-01": "New Year's Day",
+              "2026-01-26": "Australia Day",
+              "2026-04-03": "Good Friday",
+              "2026-04-06": "Easter Monday",
+              "2026-04-25": "ANZAC Day",
+              "2026-04-27": "ANZAC Day (Observed)",
+              "2026-06-08": "King's Birthday",
+              "2026-12-25": "Christmas Day",
+              "2026-12-26": "Boxing Day",
+              "2026-12-28": "Boxing Day (Observed)"
+            },
+            "2027": {
+              "2027-01-01": "New Year's Day",
+              "2027-01-26": "Australia Day",
+              "2027-03-26": "Good Friday",
+              "2027-03-29": "Easter Monday",
+              "2027-04-25": "ANZAC Day",
+              "2027-04-26": "ANZAC Day (Observed)",
+              "2027-06-14": "King's Birthday",
+              "2027-12-27": "Christmas Day (Observed)",
+              "2027-12-28": "Boxing Day (Observed)"
+            },
+            "2028": {
+              "2028-01-03": "New Year's Day (Observed)",
+              "2028-01-26": "Australia Day",
+              "2028-04-14": "Good Friday",
+              "2028-04-17": "Easter Monday",
+              "2028-04-25": "ANZAC Day",
+              "2028-06-12": "King's Birthday",
+              "2028-12-25": "Christmas Day",
+              "2028-12-26": "Boxing Day"
+            }
+          }
+        },
+        "SA": {
+          "region_name": "South Australia",
+          "holidays": {
+            "2025": {
+              "2025-03-10": "Adelaide Cup"
+            },
+            "2026": {
+              "2026-03-09": "Adelaide Cup"
+            },
+            "2027": {
+              "2027-03-08": "Adelaide Cup"
+            },
+            "2028": {
+              "2028-03-13": "Adelaide Cup"
+            }
+          }
+        }
+      }
+    }
+  }
+}
