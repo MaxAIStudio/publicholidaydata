@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "dataset_version": "2026.1",
-  "generated_at": "2026-03-13T16:25:00+10:30",
+  "dataset_version": "2026.2",
+  "generated_at": "2026-03-14T14:19:53+10:30",
   "countries": {
     "AU": {
       "country_name": "Australia",
@@ -63,13 +63,145 @@
               "2025-03-10": "Adelaide Cup"
             },
             "2026": {
-              "2026-03-09": "Adelaide Cup"
+              "2026-03-09": "Adelaide Cup Day",
+              "2026-12-24": "Christmas Eve (7pm to midnight)",
+              "2026-12-26": "Proclamation Day holiday / Boxing Day",
+              "2026-12-31": "New Year's Eve (7pm to midnight)"
             },
             "2027": {
-              "2027-03-08": "Adelaide Cup"
+              "2027-03-08": "Adelaide Cup Day",
+              "2027-12-24": "Christmas Eve (7pm to midnight)",
+              "2027-12-26": "Proclamation Day holiday / Boxing Day",
+              "2027-12-28": "Additional public holiday for Proclamation Day",
+              "2027-12-31": "New Year's Eve (7pm to midnight)"
             },
             "2028": {
-              "2028-03-13": "Adelaide Cup"
+              "2028-03-13": "Adelaide Cup Day",
+              "2028-12-24": "Christmas Eve (7pm to midnight)",
+              "2028-12-26": "Proclamation Day",
+              "2028-12-31": "New Year's Eve (7pm to midnight)"
+            },
+            "2029": {
+              "2029-03-12": "Adelaide Cup Day",
+              "2029-12-24": "Christmas Eve (7pm to midnight)",
+              "2029-12-26": "Proclamation Day",
+              "2029-12-31": "New Year's Eve (7pm to midnight)"
+            }
+          }
+        },
+        "ACT": {
+          "region_name": "Australian Capital Territory",
+          "holidays": {
+            "2026": {
+              "2026-03-09": "Canberra Day",
+              "2026-06-01": "Reconciliation Day"
+            },
+            "2027": {
+              "2027-03-08": "Canberra Day",
+              "2027-05-31": "Reconciliation Day"
+            },
+            "2028": {
+              "2028-03-13": "Canberra Day",
+              "2028-05-29": "Reconciliation Day"
+            },
+            "2029": {
+              "2029-03-12": "Canberra Day",
+              "2029-05-28": "Reconciliation Day"
+            }
+          }
+        },
+        "NSW": {
+          "region_name": "New South Wales",
+          "holidays": {
+            "2026": {
+              "2026-04-27": "Additional Day (Anzac Day substitute)"
+            },
+            "2027": {
+              "2027-04-26": "Additional Day (Anzac Day substitute)"
+            }
+          }
+        },
+        "NT": {
+          "region_name": "Northern Territory",
+          "holidays": {
+            "2026": {
+              "2026-08-03": "Picnic Day",
+              "2026-12-24": "Christmas Eve - part day holiday",
+              "2026-12-31": "New Year's Eve - part day holiday"
+            },
+            "2027": {
+              "2027-08-02": "Picnic Day",
+              "2027-12-24": "Christmas Eve - part day holiday",
+              "2027-12-31": "New Year's Eve - part day holiday"
+            },
+            "2028": {
+              "2028-08-07": "Picnic Day",
+              "2028-12-24": "Christmas Eve - part day holiday",
+              "2028-12-31": "New Year's Eve - part day holiday"
+            },
+            "2029": {
+              "2029-08-06": "Picnic Day",
+              "2029-12-24": "Christmas Eve - part day holiday",
+              "2029-12-31": "New Year's Eve - part day holiday"
+            }
+          }
+        },
+        "TAS": {
+          "region_name": "Tasmania",
+          "holidays": {
+            "2026": {
+              "2026-03-09": "Eight Hours Day",
+              "2026-04-07": "Easter Tuesday"
+            },
+            "2027": {
+              "2027-03-08": "Eight Hours Day",
+              "2027-03-30": "Easter Tuesday"
+            },
+            "2028": {
+              "2028-03-13": "Eight Hours Day",
+              "2028-04-18": "Easter Tuesday"
+            },
+            "2029": {
+              "2029-03-12": "Eight Hours Day",
+              "2029-04-03": "Easter Tuesday"
+            }
+          }
+        },
+        "VIC": {
+          "region_name": "Victoria",
+          "holidays": {
+            "2026": {
+              "2026-09-25": "Friday before the AFL Grand Final",
+              "2026-11-03": "Melbourne Cup"
+            },
+            "2027": {
+              "2027-09-24": "Friday before the AFL Grand Final",
+              "2027-11-02": "Melbourne Cup"
+            },
+            "2028": {
+              "2028-09-29": "Friday before the AFL Grand Final",
+              "2028-11-07": "Melbourne Cup"
+            },
+            "2029": {
+              "2029-09-28": "Friday before the AFL Grand Final",
+              "2029-11-06": "Melbourne Cup"
+            }
+          }
+        },
+        "WA": {
+          "region_name": "Western Australia",
+          "holidays": {
+            "2026": {
+              "2026-06-01": "Western Australia Day"
+            },
+            "2027": {
+              "2027-06-07": "Western Australia Day"
+            },
+            "2028": {
+              "2028-06-05": "Western Australia Day"
+            },
+            "2029": {
+              "2029-06-04": "Western Australia Day"
             }
           }
         }
