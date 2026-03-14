@@ -1,7 +1,11 @@
 {
   "schema_version": "1.0",
-  "catalog_version": "2026.03.14.2",
+  "catalog_version": "2026.03.14.3",
   "country": "AU",
+  "parser_flags": {
+    "enable_stacked_fraction_recognition": true,
+    "enable_unicode_fraction_recognition": true
+  },
   "templates": [
     {
       "id": "au_nsw_r5_combo_no_stopping_peak_then_1p",
