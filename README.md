@@ -12,6 +12,12 @@ Public holiday datasets for client apps.
   - Extensible multi-country format.
   - Includes `country_name`, per-region data, and multi-year grouping.
 
+- `data/parking_rules_v1.json`
+  - Parking sign rule catalog for ParkTimer runtime updates.
+
+- `data/parking_rules_schema_v1.json`
+  - JSON schema for validating `parking_rules_v1.json`.
+
 ## Update flow
 
 1. Edit JSON files.
