@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ParkTimer Sign Knowledge Schema v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "catalog_version",
+    "country",
+    "templates"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "catalog_version": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "parser_flags": {
+      "type": "object",
+      "properties": {
+        "enable_stacked_fraction_recognition": {
+          "type": "boolean"
+        },
+        "enable_unicode_fraction_recognition": {
+          "type": "boolean"
+        }
+      }
+    },
+    "templates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "match",
+          "logic"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "state_code": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "match": {
+            "type": "object",
+            "required": [
+              "required_tokens"
+            ],
+            "properties": {
+              "required_tokens": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "any_token_groups": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "logic": {
+            "type": "object",
+            "required": [
+              "limit_minutes",
+              "windows"
+            ],
+            "properties": {
+              "limit_minutes": {
+                "type": "integer"
+              },
+              "windows": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/window"
+                }
+              },
+              "unsupported_windows": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/window"
+                }
+              },
+              "user_limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "uncertain": {
+                "type": "boolean"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "window": {
+      "type": "object",
+      "required": [
+        "days",
+        "start",
+        "end"
+      ],
+      "properties": {
+        "days": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7
+          }
+        },
+        "start": {
+          "type": "string",
+          "pattern": "^[0-2][0-9]:[0-5][0-9]$"
+        },
+        "end": {
+          "type": "string",
+          "pattern": "^[0-2][0-9]:[0-5][0-9]$"
+        }
+      }
+    }
+  }
+}

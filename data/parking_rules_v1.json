@@ -1,0 +1,249 @@
+{
+  "schema_version": "1.0",
+  "catalog_version": "2026.03.14.3",
+  "country": "AU",
+  "parser_flags": {
+    "enable_stacked_fraction_recognition": true,
+    "enable_unicode_fraction_recognition": true
+  },
+  "templates": [
+    {
+      "id": "au_nsw_r5_combo_no_stopping_peak_then_1p",
+      "state_code": "NSW",
+      "match": {
+        "required_tokens": [
+          "1P",
+          "MOTOR BIKES ONLY"
+        ],
+        "any_token_groups": [
+          [
+            "7-9",
+            "7 - 9"
+          ],
+          [
+            "MON-FRI",
+            "MON - FRI"
+          ],
+          [
+            "9AM-6PM",
+            "9AM - 6PM"
+          ]
+        ]
+      },
+      "logic": {
+        "limit_minutes": 60,
+        "windows": [
+          {
+            "days": [1, 2, 3, 4, 5],
+            "start": "09:00",
+            "end": "18:00"
+          },
+          {
+            "days": [6],
+            "start": "09:00",
+            "end": "12:00"
+          }
+        ],
+        "unsupported_windows": [
+          {
+            "days": [1, 2, 3, 4, 5],
+            "start": "07:00",
+            "end": "09:00"
+          }
+        ],
+        "user_limitations": [
+          "MOTORBIKES_ONLY"
+        ],
+        "uncertain": true,
+        "note": "Composite plate; no-stopping in peak period, otherwise timed parking clauses."
+      }
+    },
+    {
+      "id": "au_nsw_1p_monfri_9_6",
+      "state_code": "NSW",
+      "match": {
+        "required_tokens": ["1P"],
+        "any_token_groups": [
+          ["9AM-6PM", "9AM - 6PM"],
+          ["MON-FRI", "MON - FRI"]
+        ]
+      },
+      "logic": {
+        "limit_minutes": 60,
+        "windows": [
+          {
+            "days": [1, 2, 3, 4, 5],
+            "start": "09:00",
+            "end": "18:00"
+          }
+        ],
+        "unsupported_windows": [],
+        "user_limitations": [],
+        "uncertain": false,
+        "note": "Standard 1P weekday daytime."
+      }
+    },
+    {
+      "id": "au_nsw_2p_monfri_9_6",
+      "state_code": "NSW",
+      "match": {
+        "required_tokens": ["2P"],
+        "any_token_groups": [
+          ["9AM-6PM", "9AM - 6PM"],
+          ["MON-FRI", "MON - FRI"]
+        ]
+      },
+      "logic": {
+        "limit_minutes": 120,
+        "windows": [
+          {
+            "days": [1, 2, 3, 4, 5],
+            "start": "09:00",
+            "end": "18:00"
+          }
+        ],
+        "unsupported_windows": [],
+        "user_limitations": [],
+        "uncertain": false,
+        "note": "Standard 2P weekday daytime."
+      }
+    },
+    {
+      "id": "au_nsw_1p_monfri_9_6_sat_9_12",
+      "state_code": "NSW",
+      "match": {
+        "required_tokens": ["1P", "SAT"],
+        "any_token_groups": [
+          ["9AM-6PM", "9AM - 6PM"],
+          ["MON-FRI", "MON - FRI"],
+          ["9AM-12", "9AM - 12", "9AM-12NOON", "9AM - 12 NOON"]
+        ]
+      },
+      "logic": {
+        "limit_minutes": 60,
+        "windows": [
+          {
+            "days": [1, 2, 3, 4, 5],
+            "start": "09:00",
+            "end": "18:00"
+          },
+          {
+            "days": [6],
+            "start": "09:00",
+            "end": "12:00"
+          }
+        ],
+        "unsupported_windows": [],
+        "user_limitations": [],
+        "uncertain": true,
+        "note": "1P with weekday + Saturday noon window."
+      }
+    },
+    {
+      "id": "au_nsw_ev_only_1p_monfri_9_6_sat_9_12",
+      "state_code": "NSW",
+      "match": {
+        "required_tokens": ["1P", "ELECTRIC", "ONLY"],
+        "any_token_groups": [
+          ["9AM-6PM", "9AM - 6PM"],
+          ["MON-FRI", "MON - FRI"],
+          ["9AM-12", "9AM - 12", "9AM-12NOON", "9AM - 12 NOON"]
+        ]
+      },
+      "logic": {
+        "limit_minutes": 60,
+        "windows": [
+          {
+            "days": [1, 2, 3, 4, 5],
+            "start": "09:00",
+            "end": "18:00"
+          },
+          {
+            "days": [6],
+            "start": "09:00",
+            "end": "12:00"
+          }
+        ],
+        "unsupported_windows": [],
+        "user_limitations": ["ELECTRIC_VEHICLES_ONLY"],
+        "uncertain": true,
+        "note": "EV only variant (R5-1-11n style)."
+      }
+    },
+    {
+      "id": "au_nsw_ev_while_charging_1p_monfri_9_6",
+      "state_code": "NSW",
+      "match": {
+        "required_tokens": ["1P", "WHILE CHARGING", "ONLY"],
+        "any_token_groups": [
+          ["9AM-6PM", "9AM - 6PM"],
+          ["MON-FRI", "MON - FRI"]
+        ]
+      },
+      "logic": {
+        "limit_minutes": 60,
+        "windows": [
+          {
+            "days": [1, 2, 3, 4, 5],
+            "start": "09:00",
+            "end": "18:00"
+          }
+        ],
+        "unsupported_windows": [],
+        "user_limitations": ["ELECTRIC_VEHICLES_WHILE_CHARGING_ONLY"],
+        "uncertain": true,
+        "note": "EV while charging only (R5-1-12n style)."
+      }
+    },
+    {
+      "id": "au_nsw_30min_monfri_8_30_5",
+      "state_code": "NSW",
+      "match": {
+        "required_tokens": ["30 MIN"],
+        "any_token_groups": [
+          ["8:30AM-5PM", "8 30AM - 5PM", "8:30AM - 5PM"],
+          ["MON-FRI", "MON - FRI"]
+        ]
+      },
+      "logic": {
+        "limit_minutes": 30,
+        "windows": [
+          {
+            "days": [1, 2, 3, 4, 5],
+            "start": "08:30",
+            "end": "17:00"
+          }
+        ],
+        "unsupported_windows": [],
+        "user_limitations": [],
+        "uncertain": true,
+        "note": "30-minute weekday daytime sign."
+      }
+    },
+    {
+      "id": "au_nsw_15min_anyday_9_6",
+      "state_code": "NSW",
+      "match": {
+        "required_tokens": ["15 MIN"],
+        "any_token_groups": [
+          ["9AM-6PM", "9AM - 6PM"],
+          ["ANY DAY", "DAILY", "ALL DAYS"]
+        ]
+      },
+      "logic": {
+        "limit_minutes": 15,
+        "windows": [
+          {
+            "days": [1, 2, 3, 4, 5, 6, 7],
+            "start": "09:00",
+            "end": "18:00"
+          }
+        ],
+        "unsupported_windows": [],
+        "user_limitations": [],
+        "uncertain": true,
+        "note": "Short-stay all-days sign."
+      }
+    }
+  ]
+}
