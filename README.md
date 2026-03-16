@@ -24,3 +24,17 @@ Public holiday datasets for client apps.
 2. Bump `version` / `dataset_version`.
 3. Commit and push.
 4. Use GitHub Raw URL in your app settings.
+
+## Local JSON editor (Flask)
+
+For table-style JSON editing, use the tool in `falsk/`:
+
+```bash
+cd falsk
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```
+
+Open http://127.0.0.1:5050
